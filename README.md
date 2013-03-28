@@ -15,7 +15,7 @@ The following steps are necessary to get this module working
 
 Following steps are necessary to get this module working (considering a zf2-skeleton or very similar application)
 
-  1. Run `php composer.phar require Nitecon/Zf2LdapAuth:1.*`
+  1. Run `php composer.phar require nitecon/zf2-ldap-auth:1.*`
   2. Add `Zf2LdapAuth` to the enabled modules list
   3. Copy the config/ldap.config.php file to your ApplicationRoot/config/autoload/ldap.config.php
      And modify as required for your installation.  Please make sure to move passwords for ldap servers etc
