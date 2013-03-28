@@ -2,7 +2,7 @@
     "name": "nitecon/zf2-ldap-auth",
     "description": "Zend Framework 2 Basic LDAP Authentication Module",
     "type": "library",
-    "keywords": ["ldap","authentication","auth", "zf2"],
+    "keywords": ["zf2","ldap","auth","authentication","zf2-ldap","zend","zend-framework","zendframework"],
     "homepage": "https://github.com/Nitecon/Zf2LdapAuth",
     "license": "New BSD License",
     "authors": [
