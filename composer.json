@@ -1,5 +1,5 @@
 {
-    "name": "Nitecon/Zf2LdapAuth",
+    "name": "nitecon/zf2ldapauth",
     "description": "Zend Framework 2 Basic LDAP Authentication Module",
     "type": "library",
     "keywords": ["ldap","authentication","auth", "zf2"],
