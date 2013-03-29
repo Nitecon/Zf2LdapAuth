@@ -21,13 +21,16 @@ Following steps are necessary to get this module working (considering a zf2-skel
      And modify as required for your installation.  Please make sure to move passwords for ldap servers etc
      out of the ldap.conf.php and into your local.php so that you do not store these files in your vcs.
   4. Create an optional callback function to store your data / initialize a session
+  5. If using a callback function create 2 static methods (setData / destroyData) in a class of your choice,
+     and add the class name to the callback_class option.  Remember to set use_callback_function to true.
 
 ## Addditional Information
 
 The module uses by default /user/login & /user/logout in the router configuration to trigger login.
 
 To test the application (once previous steps are completed) Just point your browser to your application and 
-set the URI to /user/login.
+set the URI to /user/login.  It also includes a logout page /user/logout  To effectively use /user/logout, you
+must set a callback function so the cata can be destroyed properly.
 
 ## Final notes
 
