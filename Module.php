@@ -45,33 +45,6 @@ class Module {
                     ),
                 ),
             )));
-
-        /*$router->addRoutes(
-                array(
-                        'userlogin' => array(
-                            'type' => '\Zend\Mvc\Router\Http\Literal',
-                            'options' => array(
-                                'route' => '/user/login',
-                                'defaults' => array(
-                                    '__NAMESPACE__' => 'Zf2LdapAuth\Controller',
-                                    'controller' => 'Login',
-                                    'action' => 'login',
-                                ),
-                            ),
-                        ),
-                        'userlogout' => array(
-                            'type' => '\Zend\Mvc\Router\Http\Literal',
-                            'options' => array(
-                                'route' => '/user/logout',
-                                'defaults' => array(
-                                    '__NAMESPACE__' => 'Zf2LdapAuth\Controller',
-                                    'controller' => 'Logout',
-                                    'action' => 'index',
-                                ),
-                            ),
-                        )
-                )
-        );*/
     }
 
     public function getAutoloaderConfig() {
