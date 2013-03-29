@@ -18,9 +18,13 @@ class LogoutController extends AbstractActionController {
 
     public function indexAction() {
         $view = new ViewModel();
-
-        $session = new \Zend\Session\Container('auth');
-        $session->getManager()->destroy();
+        $ldap = $this->getServiceLocator()->get('Zf2LdapAuth\Client\Ldap');
+        if ($ldap->useCallBack()) {
+            if ($userData !== FALSE) {
+                $callBackFunction = $ldap->getCallBackFunction();
+                $callBackFunction::destroyData();
+            }
+        }
         return $view;
     }
 
