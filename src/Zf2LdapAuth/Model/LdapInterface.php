@@ -56,11 +56,7 @@ class LdapInterface {
     }
 
     public function bind() {
-        $options = $this->config;
-        unset($options['log_dir']);
-        unset($options['default_location']);
-        unset($options['callback_class']);
-        unset($options['use_callback_function']);
+        $options = $this->config['zend_ldap_config'];
         try {
             $this->ldap = new \Zend\Ldap\Ldap($options['server1']);
             $this->ldap->bind();
@@ -71,7 +67,7 @@ class LdapInterface {
     }
 
     public function getUserEntry($username) {
-        $entryDN = "uid=$username," . $this->config['server1']['baseDn'];
+        $entryDN = "uid=$username," . $this->config['zend_ldap_config']['server1']['baseDn'];
         try {
             $hm = $this->ldap->getEntry($entryDN);
             $this->logger->log(Logger::INFO, 'getUserEntry data: ' . PHP_EOL . var_export($hm, TRUE));
@@ -108,11 +104,7 @@ class LdapInterface {
         return $this->config['use_callback_function'];
     }
     public function authenticate($username, $password) {
-        $options = $this->config;
-        unset($options['log_dir']);
-        unset($options['default_location']);
-        unset($options['callback_class']);
-        unset($options['use_callback_function']);
+        $options = $this->config['zend_ldap_config'];
         $auth = new AuthenticationService();
         try {
             $adapter = new AuthAdapter($options, $username, $password);

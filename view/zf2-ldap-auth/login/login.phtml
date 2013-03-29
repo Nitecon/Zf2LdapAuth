@@ -7,7 +7,7 @@
     <div class="span4 box">
         <?php
         if (isset($this->session->user)) {
-            echo "<h3 class='zf-green'>You are already logged in as (".$this->session->uid.")</h3>"; 
+            echo "<h3 class='zf-green'>You are already logged in as (".$this->session->uid.")</h3>";
             echo "<p><a href='/user/logout'>If you would like to sign out please click here</a></p>";
         } else {
             if (isset($this->error)) {
@@ -15,7 +15,7 @@
             }
             if (isset($this->form)) {
                 $form = $this->form;
-                $form->setAttribute('action', '/user/login');
+                $form->setAttribute('action',$this->url('ldap-login-route',array('action'=>'login')));
                 $form->prepare();
 
                 echo $this->form()->openTag($form);
