@@ -20,7 +20,7 @@ class LdapServiceFactory implements FactoryInterface {
     public function createService(ServiceLocatorInterface $serviceLocator) {
         $config = $serviceLocator->get('Config');
 
-        return new LdapInterface($config['zf2_ldap_config']);
+        return new LdapInterface($config['ldap_config']);
     }
 
 }

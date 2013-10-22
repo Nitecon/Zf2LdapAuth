@@ -26,7 +26,7 @@ class Module {
             'ldap-login-route' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
-                    'route' => $config['zf2_ldap_config']['login_route'],
+                    'route' => $config['ldap_config']['login_route'],
                     'defaults' => array(
                         '__NAMESPACE__' => 'Zf2LdapAuth\Controller',
                         'controller' => 'Login',
@@ -37,7 +37,7 @@ class Module {
             'ldap-logout-route' => array(
                 'type' => 'Zend\Mvc\Router\Http\Literal',
                 'options' => array(
-                    'route' => $config['zf2_ldap_config']['logout_route'],
+                    'route' => $config['ldap_config']['logout_route'],
                     'defaults' => array(
                         '__NAMESPACE__' => 'Zf2LdapAuth\Controller',
                         'controller' => 'Logout',
