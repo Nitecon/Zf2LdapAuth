@@ -9,7 +9,7 @@
  *
  */
 return array(
-    'ldap_config' => array(
+    'zf2_ldap_config' => array(
         /** Directory where log files for LDAP login should be stored */
         'log_dir' => 'data/logs',
         /** if $_SERVER['HTTP_REFERRER'] is set then the user will be transfered
